@@ -1,0 +1,107 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: powderblue;
+}
+
+@font-face {
+    font-family: 'Pixel';
+    src: url('../fonts/Pixel.ttf');
+}
+
+[wm-flappy] {
+    position: relative;
+    border: 5px solid dodgerblue;
+    height: 700px;
+    width: 1200px;
+
+    margin: 0 auto; /* centraliza a tela */
+    background-size: 1200px 760px;
+    background-image: url("../imgs/8bits-background.png");
+    background-color: deepskyblue; 
+    overflow: hidden; /* Esconde os canos que vem de fora da div*/
+}
+
+h1 {
+    color: aliceblue;
+    font-family: Pixel;
+    font-size: 4em;
+    margin: 10px 10px;
+}
+
+#play {
+    position: relative;
+    font-family: Pixel;
+    color: blanchedalmond;
+    font-size: 48px;
+    
+    z-index: 101;
+}
+
+#gameover {
+    position: relative;
+    font-family: Pixel;
+    color: blanchedalmond;
+    font-size: 88px;
+    display: none;
+    top: 32%;
+    z-index: 102;
+}
+
+.conteudo
+{
+    text-align: center;
+}
+
+.passaro {
+    position: absolute;
+    width: 60px;
+    left: calc(50% - 30px); /* posiciona o passaro no meio da tela*/
+    /* Não pode usar % é necessário usar px para poder calcular em cima da posição atual 
+    bottom: 50%;  posiciona o passaro no meio da tela*/
+}
+
+
+.par-de-barreiras {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Coloca uma barreira em cima e outra em baixo com um espao no meio*/
+}
+
+.barreira {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.barreira .borda {
+    height: 30px;
+    width: 130px;
+    background: linear-gradient(90deg, #639301, #A5E82E);
+    border: 2px solid #000;
+}
+
+.barreira .corpo {
+    height: 150px;
+    width: 110px;
+    background: linear-gradient(90deg, #639301, #A5E82E);
+    border-left: 2px solid #000;
+    border-right: 2px solid #000;
+}
+
+.progresso {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    font-family: Pixel;
+    color: white;
+    font-size: 60px;
+    z-index: 100;
+}
